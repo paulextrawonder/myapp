@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+    <title>Select semester page </title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <script type="text/javascript" src = "jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src = "js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="adminpanel.css">
+    <link type="text/css" rel="stylesheet" href="jqueryui/jquery-ui.css">
+    <link type="text/css" rel="stylesheet" href="jqueryui/jquery-ui.structure.css">
+    <link type="text/css" rel="stylesheet" href="jqueryui/jquery-ui.theme.css">
+</head>
+        <body>
+    <nav class="nav1">
+    <ul class="sidenav">
+        <li><h4>Admin</h4></li>
+        <li class="edit1">
+            <img src="Images/p2.jpg" class="dp" width="90" height="90">
+            <p class="name">Emmanuel Amadi</p>
+            <p class="mail"> abc@gmail.com</p>
+        </li>
+
+        <li class="edit2">
+          <!--password-->
+            <p class="first"><a href="panelChangepassword.html">
+              <span class="glyphicon glyphicon-lock"></span><br><span style="opacity: 0.5;">password</span></a></p>
+              <!--profile-->
+            <p class="second"><a href="panelProfile.html">
+              <span class="glyphicon glyphicon-user prof"></span><br><span style="opacity: 0.5;">Profile</span></a></p>
+              <!--logout-->
+            <p class="third"><a href="adminlog.html"><span class="glyphicon glyphicon-log-out"></span><br><span style="opacity: 0.5;">Logout</span></a></p>
+        </li>
+
+        <!--home-->
+        <li class="edit3">
+          <p><a href="panelHome.html"><span class="glyphicon glyphicon-home"></span><span class="hometext">Home</span></a></p>  
+        </li>
+
+        <li class="edit4">
+          <!--this is the students' accordion-->
+                <div class="panel-group" id="myaccordion">
+                    <div class="panel panel-primary" style="border: 0;">
+                        <div class="panel-heading" style="background-color: #45403a; border: 0px;">
+                            <h4 class="panel-title">
+                                <a href="#udemy765" data-parent="#myaccordion" data-toggle="collapse">
+                                    <p style="margin: 0; padding: 0; color: #1dc81d;">
+                                      <span class="glyphicon glyphicon-user student" style="color: #1dc81d; border:#1dc81d;"></span>
+                                        <span class="acc" style="color: #1dc81d;">
+                                          Students</span><span class="glyphicon glyphicon-menu-down" style="display: none;" id="arrow1" onclick="arrowDown()"></span> 
+                                          <span class="glyphicon glyphicon-menu-up" id="arrow2" onclick="arrowUp()"></span>
+                                      </p>
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="udemy765" class="panel-collapse collapse in">
+                            <div class="panel-body" style="border: 0px;">
+              <ul class="inner_ul">
+            <li class="inner_li"><a href="panelSelectsemester1.html" style="color:#1dc81d;">
+              <span class="glyphicon glyphicon-user sub1"></span>
+              <span style="font-size: 12px; font-style: italic;">year 1</span></a></li>
+            <li class="inner_li"><a href="panelSelectsemester2.html">
+              <span class="glyphicon glyphicon-user sub2"></span>
+              <span style="font-size: 12px; font-style: italic;">year 2</span></a></li>
+            <li class="inner_li"><a href="panelSelectsemester3.html">
+              <span class="glyphicon glyphicon-user sub3">
+              </span><span style="font-size: 12px; font-style: italic;">year 3</span></a></li>
+            <li class="inner_li"><a href="panelSelectsemester4.html">
+              <span class="glyphicon glyphicon-user sub4">
+            </span><span style="font-size: 12px; font-style: italic;">year 4</span></a></li>
+            <li class="inner_li" style="padding-bottom: 0%;"><a href="panelSelectsemester5.html">
+              <span class="glyphicon glyphicon-user sub5"></span>
+              <span style="font-size: 12px; font-style: italic;">year 5</span></a></li>
+                                  </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+              
+          </li>
+
+          <!--halls-->
+          <li class="edit5">
+            <p ><a href="panelHall.html"><span class="glyphicon glyphicon-picture"></span><span class="hometext">Halls</span></a></p>  
+          </li>
+
+          <!--invigilators-->
+          <li class="edit6">
+            <p><a href="panelInvigilator.html"><span class="glyphicon glyphicon-user invigilator">
+            </span><span class="hometext">Invigilators</span></a></p>  
+          </li>
+
+          <!--message-->
+          <li class="edit7">
+            <p><a href="panelMessage.html"><span class="glyphicon glyphicon-envelope"></span><span class="hometext">Message</span></a></p>  
+          </li>
+    </ul>
+    </nav>
+
+           
+<!--this is the third page-->
+              <div id="third_page" style="margin-left: 20%;" >
+                <ul class="top_nav3">
+                  <li class="note1">Students > year 1</li>
+                  <li class="note2"><a href="#"><span class="glyphicon glyphicon-bell">
+                    <span style="color:#ff0505; font-size: 21px; margin-left: -28px;"><sup><sup>1</sup></sup></span>
+                    </span></a>
+                  </li>
+                </ul>
+
+                <h2 class="header">Register Courses</h2>
+
+                <!--form for select semester-->
+<form action="panelAddcourse1.html" method="get" onsubmit="return term()">
+  <!-- this is the select semester accordion-->
+  <div class="flex">
+<p class="semester">Semester</p>
+<div class="panel-group over">
+  <div class="panel" style="border-top: 2px solid #b3b3b3;border-bottom: 1px solid #b3b3b3;
+   border-left: 2px solid #b3b3b3;border-right: 2px solid #b3b3b3;">
+    <div class="panel-heading" style="background-color: white;">
+      <h4 class="panel-title" style="color: #b3b3b3;">
+        <a href="#my56" data-toggle= "collapse" class="txtnicon">
+          <span class="txxt">Select Semester</span>
+          <span class="glyphicon glyphicon-menu-down arrow" id="dwn" onclick="arrow()"></span>
+           <span class="glyphicon glyphicon-menu-up arrow" id="up" style="display: none" onclick="arrows()"></span>
+        </a>
+      </h4>
+      <div id= "my56" class= "panel-collapse collapse">
+        <div class= "panel-body content">
+          <input type="radio" name="semester" value= "first Semester" id="sem1"
+           style="margin-bottom: 5%; margin-right: 10%;"/> First Semester <br>
+          <input type="radio" name="semester" value= "second Semester" id="sem2"
+           style="margin-right: 10%;"/> Second Semester
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+<input type="submit" class="save" value="submit">
+</form>
+              </div>
+
+
+                <script src= "jquery-3.4.1.min.js"></script>
+                <script src= "jqueryui/jquery-ui.js"></script>
+                <script src="adminpanel.js"></script>
+                   <script src="adminPanelExtension.js"></script>
+
+                   <script>
+                
+                function term(){
+                  var first = document.getElementById('sem1').checked;
+                  var second = document.getElementById('sem2').checked;
+
+                  if(first == false && second == false){
+                    alert('you need to select an option');
+                    return false;
+                  }
+                  else{
+                    if(first == true){
+                      $('form').attr('action','panelAddcourse1.html');
+                    }else if(second == true){
+                      $('form').attr('action','panelAddcourse11.html');
+                    }
+                    return true;
+                  }
+                 }
+
+
+                 // select semester arrow toggle
+                 function arrow(){
+    var x;
+    var y;
+    y = document.getElementById("up");
+    x = document.getElementById("dwn");
+    x.style.display= "none";
+    y.style.display= "inline";
+              }
+    
+              function arrows(){
+                var w;
+                var z;
+                w = document.getElementById("up");
+                z =  document.getElementById("dwn");
+                w.style.display= "none";
+                z.style.display= "inline";
+              }
+
+
+</script>
+        </body>
+       
+</html>
